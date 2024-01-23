@@ -1,0 +1,30 @@
+{
+  "name": "webdev-template",
+  "version": "1.0.0",
+  "description": "A template for all the configuration in a web development project",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kessius00/webdev-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kessius00/webdev-template/issues"
+  },
+  "homepage": "https://github.com/Kessius00/webdev-template#readme",
+  "devDependencies": {
+    "css-loader": "^6.8.1",
+    "node-sass": "^9.0.0",
+    "sass-loader": "^13.3.3",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
