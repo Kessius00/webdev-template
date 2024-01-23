@@ -8,11 +8,13 @@ const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 module.exports = merge(common, {
   mode: "production",
   devtool: false,
+
   output: {
-    filename: 'main.[contenthash].js',
+    filename: '[name].[contenthash].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true
   },
+
   module: {
     rules: [
       {
@@ -28,6 +30,7 @@ module.exports = merge(common, {
       }
     ]
   },
+
   plugins: [ 
     new CleanWebpackPlugin() //A webpack plugin to remove/clean your build folder(s)
     ],
