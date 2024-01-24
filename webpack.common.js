@@ -1,7 +1,7 @@
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
+  devtool: false,
 
   entry: {
     main: "./src/index.js",
@@ -10,21 +10,6 @@ module.exports = {
 
   module: {
     rules: [
-
-      {
-        //CSS
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader"]
-      },
-
-      {
-        //SASS
-        test: /\.scss$/i,
-        use: ["style-loader", //3. inject styles into DOM
-        "css-loader",         //2. turns CSS into CommonJS
-        "sass-loader"         //1. turns SASS into CSS
-        ]
-      },
 
       {
         //HTML
@@ -51,8 +36,5 @@ module.exports = {
       }
     ]
   },
-  
-  plugins: [new HtmlWebpackPlugin({
-    template: "./src/templates/template.html"
-    })],
+
 }
